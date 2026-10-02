@@ -1,0 +1,19 @@
+{
+  "case_count": 1,
+  "case_filter": "PTP-001",
+  "dataset_version": "pantry-to-plan-golden-v1",
+  "failed": 0,
+  "generated_at": "2026-09-14T01:36:53.928696+00:00",
+  "pass_bars": {
+    "failure_recovery": 0.95,
+    "fixture_expectation_accuracy": 0.9,
+    "hard_constraint_compliance": 1.0,
+    "hard_guardrails": 0,
+    "inventory_and_shopping_invariants": 1.0,
+    "local_p95_latency_seconds": 5.0,
+    "trajectory_correctness": 0.9
+  },
+  "passed": 1,
+  "run_version": "baseline-deterministic-v1",
+  "smoke_run_only": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "11_narrow_band_american_exact",
+  "description": "American, 700 target with nutritional goal (625-775 band), 2 days. Cheeseburger hits 700 exactly (delta 0); mac and cheese (650) is also in band, so both days stay in band with no fallback.",
+  "tags": [
+    "nutritional",
+    "exact-match",
+    "in-band",
+    "edge"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {
+      "breadcrumbs": 50,
+      "burger_bun": 160,
+      "butter": 40,
+      "cheddar": 180,
+      "flour": 30,
+      "ground_beef": 300,
+      "lettuce": 40,
+      "macaroni": 240,
+      "milk": 300,
+      "onion": 60,
+      "tomato": 80
+    }
+  },
+  "request": {
+    "cuisines": [
+      "american"
+    ],
+    "dinner_calorie_target": 700,
+    "days": 2,
+    "vegetarian_required": false,
+    "goal": "nutritional"
+  },
+  "expect": {
+    "all_cuisine_match": true,
+    "all_within_calorie_band": true,
+    "exact_calorie_match_day_exists": true,
+    "fallback_flags": false,
+    "days_returned": 2,
+    "notes": "Nutritional goal -> 700 +/- 75 = 625-775. Cheeseburger (700, delta 0) and mac and cheese (650, delta -50) are both in band. Exercises an exact delta=0 match with no fallback needed."
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "04_veg_exhaustion_american",
+  "description": "Sparse pantry, American cuisine, vegetarian required, 7 days requested but only 6 eligible vegetarian American recipes exist.",
+  "tags": [
+    "vegetarian",
+    "exhaustion",
+    "edge"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {
+      "onion": 60,
+      "cheddar": 50,
+      "black_beans": 80
+    }
+  },
+  "request": {
+    "cuisines": [
+      "american"
+    ],
+    "dinner_calorie_target": 550,
+    "days": 7,
+    "vegetarian_required": true,
+    "goal": "general"
+  },
+  "expect": {
+    "all_vegetarian": true,
+    "no_non_vegetarian_selected": true,
+    "days_returned": 6,
+    "reports_constraint_prevented_completion": true,
+    "notes": "6 vegetarian American recipes exist; 7 days requested. Return 6 days, never substitute a non-veg recipe, and clearly report the hard constraint blocked day 7."
+  }
+}

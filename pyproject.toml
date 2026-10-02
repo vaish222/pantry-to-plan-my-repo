@@ -1,0 +1,22 @@
+[project]
+name = "pantry-to-plan-my-repo"
+version = "0.1.0"
+description = "Turn a pantry photo into a 3-5 day dinner plan and shopping list"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2,<3",
+    "scikit-learn>=1.3.0",
+    "numpy>=1.24.0",
+    "openai>=2,<3",
+    "pillow>=10,<13",
+    "streamlit>=1.40,<2",
+    "pinecone>=4.0.0",
+    "python-dotenv>=1.0.0",
+    "langsmith>=0.3.13,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]

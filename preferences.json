@@ -1,0 +1,10 @@
+{
+  "cuisines": [
+    "italian",
+    "indian"
+  ],
+  "dinner_calorie_target": 600,
+  "days": 3,
+  "vegetarian_required": false,
+  "goal": "general"
+}

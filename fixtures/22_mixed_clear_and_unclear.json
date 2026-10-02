@@ -1,0 +1,39 @@
+{
+  "id": "22_mixed_clear_and_unclear",
+  "description": "Realistic parse: some confident canonical ids alongside garbage/low-confidence labels. Italian, 600 kcal, 4 days.",
+  "tags": [
+    "unclear-labels",
+    "vision-noise",
+    "realistic",
+    "edge"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {
+      "spaghetti": 500,
+      "garlic": 120,
+      "olive_oil": 400,
+      "canned_tomatoes": 800,
+      "leftover_container": 300,
+      "white_powder": 100,
+      "misc_vegetable": 200,
+      "half_eaten_thing": 150
+    }
+  },
+  "request": {
+    "cuisines": [
+      "italian"
+    ],
+    "dinner_calorie_target": 600,
+    "days": 4,
+    "vegetarian_required": false,
+    "goal": "general"
+  },
+  "expect": {
+    "partial_pantry_coverage": true,
+    "unrecognized_items_ignored": true,
+    "all_cuisine_match": true,
+    "days_returned": 4,
+    "notes": "Coverage comes only from the 4 recognized staples; the junk labels contribute nothing. Aglio e olio / arrabbiata should score high on coverage."
+  }
+}

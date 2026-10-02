@@ -1,0 +1,34 @@
+{
+  "id": "14_single_day_chinese",
+  "description": "Single-day plan, Chinese, 500 kcal. Minimum-days edge.",
+  "tags": [
+    "min-days",
+    "edge"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {
+      "carrot": 150,
+      "egg": 150,
+      "green_onion": 45,
+      "peas": 150,
+      "rice": 540,
+      "sesame_oil": 30,
+      "soy_sauce": 60
+    }
+  },
+  "request": {
+    "cuisines": [
+      "chinese"
+    ],
+    "dinner_calorie_target": 500,
+    "days": 1,
+    "vegetarian_required": false,
+    "goal": "general"
+  },
+  "expect": {
+    "all_cuisine_match": true,
+    "days_returned": 1,
+    "notes": "One recipe, one day; makes sure N=1 doesn't break aggregation or depletion."
+  }
+}

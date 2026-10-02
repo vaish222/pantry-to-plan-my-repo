@@ -1,0 +1,31 @@
+{
+  "id": "17_sparse_indian",
+  "description": "Sparse pantry, Indian, 4 days, 500 kcal. Sparse coverage on a non-Chinese cuisine for variety.",
+  "tags": [
+    "sparse",
+    "edge"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {
+      "rice": 200,
+      "onion": 60,
+      "garam_masala": 15
+    }
+  },
+  "request": {
+    "cuisines": [
+      "indian"
+    ],
+    "dinner_calorie_target": 500,
+    "days": 4,
+    "vegetarian_required": false,
+    "goal": "general"
+  },
+  "expect": {
+    "low_pantry_coverage": true,
+    "all_cuisine_match": true,
+    "days_returned": 4,
+    "notes": "Only staples on hand; most Indian dinners sit in band so no forced fallback, but coverage stays low."
+  }
+}

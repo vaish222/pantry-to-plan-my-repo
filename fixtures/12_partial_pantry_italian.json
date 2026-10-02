@@ -1,0 +1,36 @@
+{
+  "id": "12_partial_pantry_italian",
+  "description": "Partial Italian pantry (about half the needed ingredients present); 550 kcal, 3 days. Coverage lands mid-range.",
+  "tags": [
+    "partial",
+    "happy-path"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {
+      "balsamic_vinegar": 30,
+      "basil": 18,
+      "canned_tomatoes": 600,
+      "farro": 240,
+      "penne": 330,
+      "red_pepper_flakes": 9,
+      "spaghetti": 330,
+      "tomato": 360
+    }
+  },
+  "request": {
+    "cuisines": [
+      "italian"
+    ],
+    "dinner_calorie_target": 550,
+    "days": 3,
+    "vegetarian_required": false,
+    "goal": "general"
+  },
+  "expect": {
+    "all_cuisine_match": true,
+    "partial_pantry_coverage": true,
+    "days_returned": 3,
+    "notes": "Shared staples (olive_oil, garlic) dropped so coverage sits well below 100% but above 0."
+  }
+}

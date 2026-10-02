@@ -1,0 +1,36 @@
+{
+  "id": "23_near_miss_labels_chinese",
+  "description": "Vision near-misses: plausible but non-canonical spellings ('soy', 'spring_onion', 'rice_grains') that look right but don't match the exact join key. Chinese, 550 kcal, 3 days.",
+  "tags": [
+    "unclear-labels",
+    "vision-noise",
+    "normalization",
+    "edge"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {
+      "soy": 60,
+      "spring_onion": 40,
+      "rice_grains": 300,
+      "fresh_ginger": 30,
+      "bell_peppers": 150
+    }
+  },
+  "request": {
+    "cuisines": [
+      "chinese"
+    ],
+    "dinner_calorie_target": 550,
+    "days": 3,
+    "vegetarian_required": false,
+    "goal": "general"
+  },
+  "expect": {
+    "low_pantry_coverage": true,
+    "unrecognized_items_ignored": true,
+    "all_cuisine_match": true,
+    "days_returned": 3,
+    "notes": "Every item is a near-miss on a real ingredient, so exact join yields ~0 coverage. Documents why label canonicalization would matter (explicitly out of scope this pass) without letting near-misses silently inflate coverage."
+  }
+}

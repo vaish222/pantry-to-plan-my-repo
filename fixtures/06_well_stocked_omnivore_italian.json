@@ -1,0 +1,51 @@
+{
+  "id": "06_well_stocked_omnivore_italian",
+  "description": "Well-stocked pantry for hearty Italian dinners; 700 kcal, 4 days, no dietary restriction.",
+  "tags": [
+    "well-stocked",
+    "omnivore",
+    "happy-path"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {
+      "arugula": 90,
+      "breadcrumbs": 120,
+      "butter": 75,
+      "canned_tomatoes": 600,
+      "carrot": 150,
+      "chicken_breast": 540,
+      "egg": 150,
+      "garlic": 45,
+      "ground_beef": 450,
+      "lemon": 90,
+      "linguine": 330,
+      "mozzarella": 300,
+      "olive_oil": 60,
+      "onion": 180,
+      "parmesan": 60,
+      "parsley": 18,
+      "pizza_dough": 600,
+      "prosciutto": 150,
+      "shrimp": 420,
+      "spaghetti": 330,
+      "tomato_sauce": 360,
+      "white_wine": 150
+    }
+  },
+  "request": {
+    "cuisines": [
+      "italian"
+    ],
+    "dinner_calorie_target": 700,
+    "days": 4,
+    "vegetarian_required": false,
+    "goal": "general"
+  },
+  "expect": {
+    "all_cuisine_match": true,
+    "high_pantry_coverage": true,
+    "days_returned": 4,
+    "notes": "Meat/seafood Italian dishes cluster 590-720, all inside 550-850 band."
+  }
+}

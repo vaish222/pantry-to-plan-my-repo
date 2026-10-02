@@ -1,0 +1,55 @@
+{
+  "id": "10_multi_cuisine_italian_indian",
+  "description": "Two cuisine preferences (Italian + Indian), vegetarian, 550 kcal, 5 days. Exercises multiple cuisine tags at once.",
+  "tags": [
+    "multi-cuisine",
+    "vegetarian",
+    "happy-path"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {
+      "arborio_rice": 270,
+      "basmati_rice": 540,
+      "butter": 60,
+      "canned_tomatoes": 600,
+      "carrot": 180,
+      "cashews": 60,
+      "chickpeas": 600,
+      "garam_masala": 18,
+      "garlic": 36,
+      "ginger": 24,
+      "mushroom": 450,
+      "olive_oil": 60,
+      "onion": 210,
+      "paneer": 450,
+      "parmesan": 90,
+      "parsley": 18,
+      "peas": 180,
+      "penne": 330,
+      "red_pepper_flakes": 9,
+      "rice": 450,
+      "spinach": 600,
+      "tomato": 360,
+      "vegetable_broth": 1200,
+      "white_wine": 120,
+      "yogurt": 180
+    }
+  },
+  "request": {
+    "cuisines": [
+      "italian",
+      "indian"
+    ],
+    "dinner_calorie_target": 550,
+    "days": 5,
+    "vegetarian_required": true,
+    "goal": "general"
+  },
+  "expect": {
+    "all_vegetarian": true,
+    "all_cuisine_match": true,
+    "days_returned": 5,
+    "notes": "cuisine_match is True when a recipe's tag is in the requested set; plan may mix Italian and Indian days."
+  }
+}

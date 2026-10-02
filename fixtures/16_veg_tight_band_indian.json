@@ -1,0 +1,47 @@
+{
+  "id": "16_veg_tight_band_indian",
+  "description": "Vegetarian Indian with a nutritional goal (tight 375-525 band), 4 days. Combines the hard veg gate with band flagging.",
+  "tags": [
+    "vegetarian",
+    "tight-band",
+    "nutritional",
+    "edge"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {
+      "cauliflower": 540,
+      "chickpeas": 600,
+      "cumin": 12,
+      "garam_masala": 18,
+      "garlic": 30,
+      "ginger": 24,
+      "onion": 210,
+      "paneer": 450,
+      "peas": 150,
+      "potato": 540,
+      "red_lentils": 450,
+      "rice": 450,
+      "spinach": 600,
+      "tomato": 360,
+      "turmeric": 9
+    }
+  },
+  "request": {
+    "cuisines": [
+      "indian"
+    ],
+    "dinner_calorie_target": 450,
+    "days": 4,
+    "vegetarian_required": true,
+    "goal": "nutritional"
+  },
+  "expect": {
+    "all_vegetarian": true,
+    "all_cuisine_match": true,
+    "all_within_calorie_band": false,
+    "some_days_flagged_out_of_band": true,
+    "days_returned": 4,
+    "notes": "Nutritional goal -> 450 +/- 75 = 375-525. Aloo gobi (440), dal (470), and chana (520) sit in band; the 4th veg day (palak 560 / biryani 590 / paneer wrap 540) is flagged out-of-band but stays vegetarian."
+  }
+}

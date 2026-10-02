@@ -1,0 +1,49 @@
+{
+  "id": "08_well_stocked_chinese_omnivore",
+  "description": "Well-stocked pantry for Chinese dinners; 600 kcal, 4 days.",
+  "tags": [
+    "well-stocked",
+    "omnivore",
+    "happy-path"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {
+      "bell_pepper": 210,
+      "broccoli": 450,
+      "cabbage": 240,
+      "carrot": 150,
+      "chicken_breast": 510,
+      "chicken_thigh": 540,
+      "cornstarch": 60,
+      "dried_chili": 9,
+      "flank_steak": 510,
+      "garlic": 30,
+      "ginger": 24,
+      "green_onion": 45,
+      "hoisin_sauce": 90,
+      "lo_mein_noodles": 390,
+      "oyster_sauce": 60,
+      "peanuts": 90,
+      "rice": 450,
+      "sesame_oil": 30,
+      "shrimp": 420,
+      "soy_sauce": 75
+    }
+  },
+  "request": {
+    "cuisines": [
+      "chinese"
+    ],
+    "dinner_calorie_target": 600,
+    "days": 4,
+    "vegetarian_required": false,
+    "goal": "general"
+  },
+  "expect": {
+    "all_cuisine_match": true,
+    "high_pantry_coverage": true,
+    "days_returned": 4,
+    "notes": "General Tso at 700 sits at the top edge of 450-750."
+  }
+}

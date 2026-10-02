@@ -1,0 +1,36 @@
+{
+  "id": "21_ambiguous_labels_italian",
+  "description": "Pantry parsed from a messy photo: generic, low-confidence labels ('cheese', 'pasta', 'canned_stuff') that don't resolve to specific corpus ingredients. Italian, 600 kcal, 3 days.",
+  "tags": [
+    "unclear-labels",
+    "vision-noise",
+    "edge"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {
+      "cheese": 200,
+      "pasta": 500,
+      "canned_stuff": 400,
+      "green_herb": 15,
+      "cooking_oil": 300,
+      "unknown_jar": 250
+    }
+  },
+  "request": {
+    "cuisines": [
+      "italian"
+    ],
+    "dinner_calorie_target": 600,
+    "days": 3,
+    "vegetarian_required": false,
+    "goal": "general"
+  },
+  "expect": {
+    "low_pantry_coverage": true,
+    "unrecognized_items_ignored": true,
+    "all_cuisine_match": true,
+    "days_returned": 3,
+    "notes": "None of these labels match canonical ids, so coverage is ~0 and everything shows on the shopping list. Verifies unknown ids are silently ignored, not fatal."
+  }
+}

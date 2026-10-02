@@ -1,0 +1,34 @@
+{
+  "id": "02_sparse_chinese_fallback",
+  "description": "Nearly empty pantry, Chinese cuisine, 5 days, nutritional goal. Only 4 Chinese recipes fall in the 375-525 band, so day 5 must fall back to closest calorie.",
+  "tags": [
+    "sparse",
+    "fallback",
+    "nutritional",
+    "edge"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {
+      "rice": 120,
+      "soy_sauce": 40,
+      "garlic": 20
+    }
+  },
+  "request": {
+    "cuisines": [
+      "chinese"
+    ],
+    "dinner_calorie_target": 450,
+    "days": 5,
+    "vegetarian_required": false,
+    "goal": "nutritional"
+  },
+  "expect": {
+    "low_pantry_coverage": true,
+    "all_cuisine_match": true,
+    "at_least_one_fallback": true,
+    "days_returned": 5,
+    "notes": "Nutritional goal -> 450 +/- 75 = 375-525. 4 recipes in band (broccoli 410, egg-drop 440, fried rice 480, kung pao tofu 520); 5th day forced to closest-calorie outside band (mapo/lo mein 560). Proves fallback fires instead of returning nothing."
+  }
+}

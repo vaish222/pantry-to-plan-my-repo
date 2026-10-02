@@ -1,0 +1,41 @@
+{
+  "id": "20_mixed_realistic_pantry",
+  "description": "A realistic mixed household pantry; Italian, 600 kcal, 4 days. The everyday normal case.",
+  "tags": [
+    "realistic",
+    "happy-path"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {
+      "olive_oil": 500,
+      "garlic": 120,
+      "onion": 400,
+      "canned_tomatoes": 800,
+      "spaghetti": 500,
+      "penne": 500,
+      "parmesan": 150,
+      "mozzarella": 200,
+      "egg": 300,
+      "chicken_breast": 400,
+      "carrot": 300,
+      "basil": 20,
+      "parsley": 20
+    }
+  },
+  "request": {
+    "cuisines": [
+      "italian"
+    ],
+    "dinner_calorie_target": 600,
+    "days": 4,
+    "vegetarian_required": false,
+    "goal": "general"
+  },
+  "expect": {
+    "all_cuisine_match": true,
+    "mixed_pantry_coverage": true,
+    "days_returned": 4,
+    "notes": "Common staples on hand; some recipes well covered, others need a few buys. Representative demo run."
+  }
+}

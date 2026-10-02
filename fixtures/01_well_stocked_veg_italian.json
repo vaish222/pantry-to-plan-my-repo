@@ -1,0 +1,49 @@
+{
+  "id": "01_well_stocked_veg_italian",
+  "description": "Well-stocked pantry covering several vegetarian Italian dinners; 600 kcal target, 3 days, vegetarian required.",
+  "tags": [
+    "well-stocked",
+    "vegetarian",
+    "happy-path"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {
+      "arborio_rice": 270,
+      "basil": 18,
+      "butter": 60,
+      "canned_tomatoes": 600,
+      "garlic": 45,
+      "mozzarella": 300,
+      "mushroom": 450,
+      "olive_oil": 90,
+      "onion": 180,
+      "parmesan": 90,
+      "parsley": 24,
+      "penne": 330,
+      "pizza_dough": 600,
+      "red_pepper_flakes": 9,
+      "spaghetti": 330,
+      "tomato_sauce": 270,
+      "vegetable_broth": 1200,
+      "white_wine": 120
+    }
+  },
+  "request": {
+    "cuisines": [
+      "italian"
+    ],
+    "dinner_calorie_target": 600,
+    "days": 3,
+    "vegetarian_required": true,
+    "goal": "general"
+  },
+  "expect": {
+    "all_vegetarian": true,
+    "all_cuisine_match": true,
+    "all_within_calorie_band": true,
+    "fallback_flags": false,
+    "days_returned": 3,
+    "notes": "Clean happy path: high coverage, every day veg + Italian + in band (general goal, 600 +/- 150 = 450-750), no fallback."
+  }
+}

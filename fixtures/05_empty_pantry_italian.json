@@ -1,0 +1,29 @@
+{
+  "id": "05_empty_pantry_italian",
+  "description": "Completely empty pantry, Italian, 3 days. Extreme sparse edge: coverage is 0 everywhere, everything lands on the shopping list.",
+  "tags": [
+    "empty",
+    "sparse",
+    "edge"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {}
+  },
+  "request": {
+    "cuisines": [
+      "italian"
+    ],
+    "dinner_calorie_target": 600,
+    "days": 3,
+    "vegetarian_required": false,
+    "goal": "general"
+  },
+  "expect": {
+    "low_pantry_coverage": true,
+    "all_pantry_coverage_zero": true,
+    "all_cuisine_match": true,
+    "days_returned": 3,
+    "notes": "Plan still succeeds; shopping list equals full ingredient demand for the 3 chosen recipes."
+  }
+}

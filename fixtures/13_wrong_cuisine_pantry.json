@@ -1,0 +1,40 @@
+{
+  "id": "13_wrong_cuisine_pantry",
+  "description": "Pantry fully stocked with Indian ingredients but request is Italian; 600 kcal, 3 days. Full jars, near-zero coverage.",
+  "tags": [
+    "mismatch",
+    "edge"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {
+      "butter": 100,
+      "chicken_thigh": 720,
+      "chickpeas": 800,
+      "cream": 200,
+      "garam_masala": 24,
+      "garlic": 40,
+      "ginger": 32,
+      "onion": 280,
+      "paneer": 600,
+      "rice": 600,
+      "spinach": 800,
+      "tomato": 480
+    }
+  },
+  "request": {
+    "cuisines": [
+      "italian"
+    ],
+    "dinner_calorie_target": 600,
+    "days": 3,
+    "vegetarian_required": false,
+    "goal": "general"
+  },
+  "expect": {
+    "all_cuisine_match": true,
+    "low_pantry_coverage": true,
+    "days_returned": 3,
+    "notes": "Coverage is low despite a large pantry because the ids don't join the Italian recipes; checks join specificity (shared items like onion/garlic/tomato still count)."
+  }
+}

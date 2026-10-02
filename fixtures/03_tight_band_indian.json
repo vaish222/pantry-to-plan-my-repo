@@ -1,0 +1,41 @@
+{
+  "id": "03_tight_band_indian",
+  "description": "Indian cuisine, low 350 target with nutritional goal (tight 275-425 band), 4 days. No Indian recipe sits inside 275-425, so every day is an out-of-band flagged pick.",
+  "tags": [
+    "tight-band",
+    "flagging",
+    "nutritional",
+    "edge"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {
+      "cauliflower": 360,
+      "cumin": 8,
+      "garlic": 20,
+      "onion": 120,
+      "peas": 100,
+      "potato": 360,
+      "red_lentils": 300,
+      "rice": 300,
+      "tomato": 180,
+      "turmeric": 6
+    }
+  },
+  "request": {
+    "cuisines": [
+      "indian"
+    ],
+    "dinner_calorie_target": 350,
+    "days": 4,
+    "vegetarian_required": false,
+    "goal": "nutritional"
+  },
+  "expect": {
+    "all_cuisine_match": true,
+    "all_within_calorie_band": false,
+    "every_day_flagged_out_of_band": true,
+    "days_returned": 4,
+    "notes": "Nutritional goal -> 350 +/- 75 = 275-425. Lowest Indian recipe is aloo gobi at 440 (>425), so no day can satisfy the band. Per spec there is no reject-and-retry: pick the 4 closest (aloo gobi 440, dal 470, chana 520, paneer wrap 540) and flag each as out-of-band."
+  }
+}

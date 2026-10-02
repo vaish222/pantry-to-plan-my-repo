@@ -1,0 +1,50 @@
+{
+  "id": "09_well_stocked_american_veg",
+  "description": "Well-stocked pantry for vegetarian American dinners; 550 kcal, 4 days, vegetarian required.",
+  "tags": [
+    "well-stocked",
+    "vegetarian",
+    "happy-path"
+  ],
+  "pantry": {
+    "as_of": "2026-09-11",
+    "items": {
+      "avocado": 180,
+      "bell_pepper": 210,
+      "black_beans": 480,
+      "bread": 270,
+      "breadcrumbs": 90,
+      "burger_bun": 240,
+      "butter": 60,
+      "canned_tomatoes": 600,
+      "cauliflower": 600,
+      "cheddar": 270,
+      "corn": 150,
+      "flour": 45,
+      "hot_sauce": 90,
+      "macaroni": 360,
+      "milk": 450,
+      "onion": 150,
+      "ranch_dressing": 75,
+      "rice": 450,
+      "tortilla": 300,
+      "vegetable_broth": 750
+    }
+  },
+  "request": {
+    "cuisines": [
+      "american"
+    ],
+    "dinner_calorie_target": 550,
+    "days": 4,
+    "vegetarian_required": true,
+    "goal": "general"
+  },
+  "expect": {
+    "all_vegetarian": true,
+    "all_cuisine_match": true,
+    "all_within_calorie_band": true,
+    "days_returned": 4,
+    "notes": "5 stocked veg options 480-650, all inside 400-700."
+  }
+}

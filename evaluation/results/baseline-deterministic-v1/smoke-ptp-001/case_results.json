@@ -1,0 +1,888 @@
+[
+  {
+    "case_id": "PTP-001",
+    "description": "Well-stocked pantry covering several vegetarian Italian dinners; 600 kcal target, 3 days, vegetarian required.",
+    "error": null,
+    "expected": {
+      "all_cuisine_match": true,
+      "all_vegetarian": true,
+      "all_within_calorie_band": true,
+      "days_returned": 3,
+      "fallback_flags": false,
+      "notes": "Clean happy path: high coverage, every day veg + Italian + in band (general goal, 600 +/- 150 = 450-750), no fallback."
+    },
+    "failure_recovery_applicable": false,
+    "failure_recovery_pass": true,
+    "fixture_expectation_checks": {
+      "all_cuisine_match": true,
+      "all_vegetarian": true,
+      "all_within_calorie_band": true,
+      "days_returned": true,
+      "fallback_flags": true
+    },
+    "fixture_expectation_score": 1.0,
+    "fixture_id": "01_well_stocked_veg_italian",
+    "guardrail_violations": {
+      "invalid_recipe_ids_materialized": 0,
+      "invalid_shopping_list_quantities": 0,
+      "negative_inventory_events": 0,
+      "unreported_hard_constraint_failures": 0,
+      "vegetarian_violations": 0
+    },
+    "hard_constraint_pass": true,
+    "inputs": {
+      "case_id": "PTP-001",
+      "dataset_version": "pantry-to-plan-golden-v1",
+      "description": "Well-stocked pantry covering several vegetarian Italian dinners; 600 kcal target, 3 days, vegetarian required.",
+      "fixture_id": "01_well_stocked_veg_italian",
+      "pantry": {
+        "as_of": "2026-09-11",
+        "items": {
+          "arborio_rice": 270,
+          "basil": 18,
+          "butter": 60,
+          "canned_tomatoes": 600,
+          "garlic": 45,
+          "mozzarella": 300,
+          "mushroom": 450,
+          "olive_oil": 90,
+          "onion": 180,
+          "parmesan": 90,
+          "parsley": 24,
+          "penne": 330,
+          "pizza_dough": 600,
+          "red_pepper_flakes": 9,
+          "spaghetti": 330,
+          "tomato_sauce": 270,
+          "vegetable_broth": 1200,
+          "white_wine": 120
+        }
+      },
+      "request": {
+        "cuisines": [
+          "italian"
+        ],
+        "days": 3,
+        "dinner_calorie_target": 600,
+        "goal": "general",
+        "vegetarian_required": true
+      },
+      "scenario_type": "happy_path",
+      "tags": [
+        "well-stocked",
+        "vegetarian",
+        "happy-path"
+      ]
+    },
+    "inventory_correct": true,
+    "langsmith_trace_id": "01a09d8f-5d7f-7401-9dd7-42d9cf49042d",
+    "langsmith_trace_url": "https://smith.langchain.com/o/d73d37d3-23d2-4bee-99db-9a8a59d82020/projects/p/2e059249-719a-4773-a05e-11385ac6ef09/r/01a09d8f-5d7f-7401-9dd7-42d9cf49042d?poll=true",
+    "latency_ms": 55.459,
+    "model_calls": 0,
+    "overall_case_pass": true,
+    "predicted": {
+      "day_plans": [
+        {
+          "calorie_delta": 10,
+          "cuisine_match": true,
+          "day": 1,
+          "fallback": false,
+          "flags": [],
+          "pantry_coverage": 1.0,
+          "recipe": {
+            "calories_per_serving": 610,
+            "cook_time_min": null,
+            "cuisine_tags": [
+              "italian"
+            ],
+            "ingredients": [
+              {
+                "display_name": null,
+                "ingredient_id": "pizza_dough",
+                "quantity_g": 200.0
+              },
+              {
+                "display_name": null,
+                "ingredient_id": "tomato_sauce",
+                "quantity_g": 90.0
+              },
+              {
+                "display_name": null,
+                "ingredient_id": "mozzarella",
+                "quantity_g": 100.0
+              },
+              {
+                "display_name": null,
+                "ingredient_id": "basil",
+                "quantity_g": 6.0
+              },
+              {
+                "display_name": null,
+                "ingredient_id": "olive_oil",
+                "quantity_g": 12.0
+              }
+            ],
+            "instructions": [
+              "Stretch the pizza dough onto a tray.",
+              "Spread with tomato sauce and top with mozzarella.",
+              "Bake until bubbling, then finish with basil and a drizzle of olive oil."
+            ],
+            "recipe_id": "it_margherita_flatbread",
+            "title": "Margherita Flatbread",
+            "vegetarian": true
+          },
+          "score": {
+            "calorie_delta": 10,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 1.0,
+            "recipe_id": "it_margherita_flatbread",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.896667
+          },
+          "vegetarian_required": true
+        },
+        {
+          "calorie_delta": -20,
+          "cuisine_match": true,
+          "day": 2,
+          "fallback": false,
+          "flags": [],
+          "pantry_coverage": 1.0,
+          "recipe": {
+            "calories_per_serving": 580,
+            "cook_time_min": null,
+            "cuisine_tags": [
+              "italian"
+            ],
+            "ingredients": [
+              {
+                "display_name": null,
+                "ingredient_id": "arborio_rice",
+                "quantity_g": 90.0
+              },
+              {
+                "display_name": null,
+                "ingredient_id": "mushroom",
+                "quantity_g": 150.0
+              },
+              {
+                "display_name": null,
+                "ingredient_id": "onion",
+                "quantity_g": 60.0
+              },
+              {
+                "display_name": null,
+                "ingredient_id": "parmesan",
+                "quantity_g": 30.0
+              },
+              {
+                "display_name": null,
+                "ingredient_id": "vegetable_broth",
+                "quantity_g": 400.0
+              },
+              {
+                "display_name": null,
+                "ingredient_id": "butter",
+                "quantity_g": 20.0
+              },
+              {
+                "display_name": null,
+                "ingredient_id": "white_wine",
+                "quantity_g": 40.0
+              }
+            ],
+            "instructions": [
+              "Saute the onion and mushrooms in butter.",
+              "Add the rice and white wine, then ladle in warm broth, stirring until creamy.",
+              "Stir in the parmesan and serve."
+            ],
+            "recipe_id": "it_mushroom_risotto",
+            "title": "Mushroom Risotto",
+            "vegetarian": true
+          },
+          "score": {
+            "calorie_delta": -20,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 1.0,
+            "recipe_id": "it_mushroom_risotto",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.893333
+          },
+          "vegetarian_required": true
+        },
+        {
+          "calorie_delta": -60,
+          "cuisine_match": true,
+          "day": 3,
+          "fallback": false,
+          "flags": [],
+          "pantry_coverage": 1.0,
+          "recipe": {
+            "calories_per_serving": 540,
+            "cook_time_min": null,
+            "cuisine_tags": [
+              "italian"
+            ],
+            "ingredients": [
+              {
+                "display_name": null,
+                "ingredient_id": "penne",
+                "quantity_g": 110.0
+              },
+              {
+                "display_name": null,
+                "ingredient_id": "canned_tomatoes",
+                "quantity_g": 200.0
+              },
+              {
+                "display_name": null,
+                "ingredient_id": "garlic",
+                "quantity_g": 12.0
+              },
+              {
+                "display_name": null,
+                "ingredient_id": "red_pepper_flakes",
+                "quantity_g": 3.0
+              },
+              {
+                "display_name": null,
+                "ingredient_id": "olive_oil",
+                "quantity_g": 20.0
+              },
+              {
+                "display_name": null,
+                "ingredient_id": "parsley",
+                "quantity_g": 6.0
+              }
+            ],
+            "instructions": [
+              "Boil the penne until al dente.",
+              "Simmer canned tomatoes with garlic, red pepper flakes, and olive oil.",
+              "Toss the sauce with the pasta and parsley and serve."
+            ],
+            "recipe_id": "it_penne_arrabbiata",
+            "title": "Penne Arrabbiata",
+            "vegetarian": true
+          },
+          "score": {
+            "calorie_delta": -60,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 1.0,
+            "recipe_id": "it_penne_arrabbiata",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.88
+          },
+          "vegetarian_required": true
+        }
+      ],
+      "final_pantry": [
+        {
+          "confidence": 1.0,
+          "display_name": "arborio rice",
+          "ingredient_id": "arborio_rice",
+          "quantity_g": 180.0,
+          "source_text": null
+        },
+        {
+          "confidence": 1.0,
+          "display_name": "basil",
+          "ingredient_id": "basil",
+          "quantity_g": 12.0,
+          "source_text": null
+        },
+        {
+          "confidence": 1.0,
+          "display_name": "butter",
+          "ingredient_id": "butter",
+          "quantity_g": 40.0,
+          "source_text": null
+        },
+        {
+          "confidence": 1.0,
+          "display_name": "canned tomatoes",
+          "ingredient_id": "canned_tomatoes",
+          "quantity_g": 400.0,
+          "source_text": null
+        },
+        {
+          "confidence": 1.0,
+          "display_name": "garlic",
+          "ingredient_id": "garlic",
+          "quantity_g": 33.0,
+          "source_text": null
+        },
+        {
+          "confidence": 1.0,
+          "display_name": "mozzarella",
+          "ingredient_id": "mozzarella",
+          "quantity_g": 200.0,
+          "source_text": null
+        },
+        {
+          "confidence": 1.0,
+          "display_name": "mushroom",
+          "ingredient_id": "mushroom",
+          "quantity_g": 300.0,
+          "source_text": null
+        },
+        {
+          "confidence": 1.0,
+          "display_name": "olive oil",
+          "ingredient_id": "olive_oil",
+          "quantity_g": 58.0,
+          "source_text": null
+        },
+        {
+          "confidence": 1.0,
+          "display_name": "onion",
+          "ingredient_id": "onion",
+          "quantity_g": 120.0,
+          "source_text": null
+        },
+        {
+          "confidence": 1.0,
+          "display_name": "parmesan",
+          "ingredient_id": "parmesan",
+          "quantity_g": 60.0,
+          "source_text": null
+        },
+        {
+          "confidence": 1.0,
+          "display_name": "parsley",
+          "ingredient_id": "parsley",
+          "quantity_g": 18.0,
+          "source_text": null
+        },
+        {
+          "confidence": 1.0,
+          "display_name": "penne",
+          "ingredient_id": "penne",
+          "quantity_g": 220.0,
+          "source_text": null
+        },
+        {
+          "confidence": 1.0,
+          "display_name": "pizza dough",
+          "ingredient_id": "pizza_dough",
+          "quantity_g": 400.0,
+          "source_text": null
+        },
+        {
+          "confidence": 1.0,
+          "display_name": "red pepper flakes",
+          "ingredient_id": "red_pepper_flakes",
+          "quantity_g": 6.0,
+          "source_text": null
+        },
+        {
+          "confidence": 1.0,
+          "display_name": "spaghetti",
+          "ingredient_id": "spaghetti",
+          "quantity_g": 330.0,
+          "source_text": null
+        },
+        {
+          "confidence": 1.0,
+          "display_name": "tomato sauce",
+          "ingredient_id": "tomato_sauce",
+          "quantity_g": 180.0,
+          "source_text": null
+        },
+        {
+          "confidence": 1.0,
+          "display_name": "vegetable broth",
+          "ingredient_id": "vegetable_broth",
+          "quantity_g": 800.0,
+          "source_text": null
+        },
+        {
+          "confidence": 1.0,
+          "display_name": "white wine",
+          "ingredient_id": "white_wine",
+          "quantity_g": 80.0,
+          "source_text": null
+        }
+      ],
+      "requested_days": 3,
+      "shopping_list": [],
+      "trace": [
+        {
+          "data": {
+            "ids": [
+              "it_mushroom_risotto",
+              "it_penne_arrabbiata",
+              "it_margherita_flatbread",
+              "it_aglio_e_olio",
+              "it_caprese_farro_salad",
+              "it_tuscan_white_bean_soup",
+              "am_grilled_cheese_tomato_soup",
+              "am_mac_and_cheese"
+            ]
+          },
+          "day": 1,
+          "message": "retrieved 8 candidate(s)",
+          "step": "retrieve"
+        },
+        {
+          "data": {
+            "calorie_delta": -20,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 1.0,
+            "recipe_id": "it_mushroom_risotto",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.893333
+          },
+          "day": 1,
+          "message": "scored it_mushroom_risotto",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": -60,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 1.0,
+            "recipe_id": "it_penne_arrabbiata",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.88
+          },
+          "day": 1,
+          "message": "scored it_penne_arrabbiata",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": 10,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 1.0,
+            "recipe_id": "it_margherita_flatbread",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.896667
+          },
+          "day": 1,
+          "message": "scored it_margherita_flatbread",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": -80,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 1.0,
+            "recipe_id": "it_aglio_e_olio",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.873333
+          },
+          "day": 1,
+          "message": "scored it_aglio_e_olio",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": -130,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 0.5,
+            "recipe_id": "it_caprese_farro_salad",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.706667
+          },
+          "day": 1,
+          "message": "scored it_caprese_farro_salad",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": -170,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 0.5714,
+            "recipe_id": "it_tuscan_white_bean_soup",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.714762
+          },
+          "day": 1,
+          "message": "scored it_tuscan_white_bean_soup",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": -40,
+            "cuisine_score": 0.0,
+            "eligible": true,
+            "pantry_coverage": 0.6667,
+            "recipe_id": "am_grilled_cheese_tomato_soup",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.386667
+          },
+          "day": 1,
+          "message": "scored am_grilled_cheese_tomato_soup",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": 50,
+            "cuisine_score": 0.0,
+            "eligible": true,
+            "pantry_coverage": 0.1667,
+            "recipe_id": "am_mac_and_cheese",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.233333
+          },
+          "day": 1,
+          "message": "scored am_mac_and_cheese",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": 10,
+            "sampled_from": 6,
+            "temperature": 0.0,
+            "total_score": 0.896667
+          },
+          "day": 1,
+          "message": "selected it_margherita_flatbread",
+          "step": "select"
+        },
+        {
+          "data": null,
+          "day": 1,
+          "message": "applied it_margherita_flatbread; 0 shortage(s)",
+          "step": "deplete"
+        },
+        {
+          "data": {
+            "ids": [
+              "it_mushroom_risotto",
+              "it_penne_arrabbiata",
+              "it_margherita_flatbread",
+              "it_aglio_e_olio",
+              "it_caprese_farro_salad",
+              "it_tuscan_white_bean_soup",
+              "am_grilled_cheese_tomato_soup",
+              "am_mac_and_cheese"
+            ]
+          },
+          "day": 2,
+          "message": "retrieved 8 candidate(s)",
+          "step": "retrieve"
+        },
+        {
+          "data": {
+            "calorie_delta": -20,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 1.0,
+            "recipe_id": "it_mushroom_risotto",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.893333
+          },
+          "day": 2,
+          "message": "scored it_mushroom_risotto",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": -60,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 1.0,
+            "recipe_id": "it_penne_arrabbiata",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.88
+          },
+          "day": 2,
+          "message": "scored it_penne_arrabbiata",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": 10,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 1.0,
+            "recipe_id": "it_margherita_flatbread",
+            "reject_reasons": [],
+            "repeat_penalty": 1.0,
+            "total_score": 0.796667
+          },
+          "day": 2,
+          "message": "scored it_margherita_flatbread",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": -80,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 1.0,
+            "recipe_id": "it_aglio_e_olio",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.873333
+          },
+          "day": 2,
+          "message": "scored it_aglio_e_olio",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": -130,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 0.5,
+            "recipe_id": "it_caprese_farro_salad",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.706667
+          },
+          "day": 2,
+          "message": "scored it_caprese_farro_salad",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": -170,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 0.5714,
+            "recipe_id": "it_tuscan_white_bean_soup",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.714762
+          },
+          "day": 2,
+          "message": "scored it_tuscan_white_bean_soup",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": -40,
+            "cuisine_score": 0.0,
+            "eligible": true,
+            "pantry_coverage": 0.6667,
+            "recipe_id": "am_grilled_cheese_tomato_soup",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.386667
+          },
+          "day": 2,
+          "message": "scored am_grilled_cheese_tomato_soup",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": 50,
+            "cuisine_score": 0.0,
+            "eligible": true,
+            "pantry_coverage": 0.1667,
+            "recipe_id": "am_mac_and_cheese",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.233333
+          },
+          "day": 2,
+          "message": "scored am_mac_and_cheese",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": -20,
+            "sampled_from": 5,
+            "temperature": 0.0,
+            "total_score": 0.893333
+          },
+          "day": 2,
+          "message": "selected it_mushroom_risotto",
+          "step": "select"
+        },
+        {
+          "data": null,
+          "day": 2,
+          "message": "applied it_mushroom_risotto; 0 shortage(s)",
+          "step": "deplete"
+        },
+        {
+          "data": {
+            "ids": [
+              "it_mushroom_risotto",
+              "it_penne_arrabbiata",
+              "it_margherita_flatbread",
+              "it_aglio_e_olio",
+              "it_caprese_farro_salad",
+              "it_tuscan_white_bean_soup",
+              "am_grilled_cheese_tomato_soup",
+              "am_mac_and_cheese"
+            ]
+          },
+          "day": 3,
+          "message": "retrieved 8 candidate(s)",
+          "step": "retrieve"
+        },
+        {
+          "data": {
+            "calorie_delta": -20,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 1.0,
+            "recipe_id": "it_mushroom_risotto",
+            "reject_reasons": [],
+            "repeat_penalty": 1.0,
+            "total_score": 0.793333
+          },
+          "day": 3,
+          "message": "scored it_mushroom_risotto",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": -60,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 1.0,
+            "recipe_id": "it_penne_arrabbiata",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.88
+          },
+          "day": 3,
+          "message": "scored it_penne_arrabbiata",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": 10,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 1.0,
+            "recipe_id": "it_margherita_flatbread",
+            "reject_reasons": [],
+            "repeat_penalty": 1.0,
+            "total_score": 0.796667
+          },
+          "day": 3,
+          "message": "scored it_margherita_flatbread",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": -80,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 1.0,
+            "recipe_id": "it_aglio_e_olio",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.873333
+          },
+          "day": 3,
+          "message": "scored it_aglio_e_olio",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": -130,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 0.5,
+            "recipe_id": "it_caprese_farro_salad",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.706667
+          },
+          "day": 3,
+          "message": "scored it_caprese_farro_salad",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": -170,
+            "cuisine_score": 1.0,
+            "eligible": true,
+            "pantry_coverage": 0.5714,
+            "recipe_id": "it_tuscan_white_bean_soup",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.714762
+          },
+          "day": 3,
+          "message": "scored it_tuscan_white_bean_soup",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": -40,
+            "cuisine_score": 0.0,
+            "eligible": true,
+            "pantry_coverage": 0.6667,
+            "recipe_id": "am_grilled_cheese_tomato_soup",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.386667
+          },
+          "day": 3,
+          "message": "scored am_grilled_cheese_tomato_soup",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": 50,
+            "cuisine_score": 0.0,
+            "eligible": true,
+            "pantry_coverage": 0.1667,
+            "recipe_id": "am_mac_and_cheese",
+            "reject_reasons": [],
+            "repeat_penalty": 0.0,
+            "total_score": 0.233333
+          },
+          "day": 3,
+          "message": "scored am_mac_and_cheese",
+          "step": "score"
+        },
+        {
+          "data": {
+            "calorie_delta": -60,
+            "sampled_from": 4,
+            "temperature": 0.0,
+            "total_score": 0.88
+          },
+          "day": 3,
+          "message": "selected it_penne_arrabbiata",
+          "step": "select"
+        },
+        {
+          "data": null,
+          "day": 3,
+          "message": "applied it_penne_arrabbiata; 0 shortage(s)",
+          "step": "deplete"
+        }
+      ],
+      "warnings": []
+    },
+    "retry_count": 0,
+    "run_version": "baseline-deterministic-v1",
+    "scenario_type": "happy_path",
+    "shopping_list_correct": true,
+    "token_usage": null,
+    "tool_calls": 3,
+    "trajectory_pass": true
+  }
+]
